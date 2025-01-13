@@ -14,10 +14,10 @@ openai.api_key = "sk-proj-_IK7ZGbbbWKvxKQ76XXU5kLrE1_EuHK7DMh0amsB1TV6Rhg8cb1lTJ
 def load_data():
     global entry_level, mid_level, senior_level, all_data
     try:
-        entry_level = pd.read_csv("C:/Users/Student/Desktop/JMA/BE/data/entry_level.csv")
-        mid_level = pd.read_csv("C:/Users/Student/Desktop/JMA/BE/data/mid_level.csv")
-        senior_level = pd.read_csv("C:/Users/Student/Desktop/JMA/BE/data/senior_level.csv")
-        all_data = pd.read_csv("C:/Users/Student/Desktop/JMA/BE/data/Team_1.csv")  
+        entry_level = pd.read_csv("BE/data/entry_level.csv")
+        mid_level = pd.read_csv("BE/data/mid_level.csv")
+        senior_level = pd.read_csv("BE/data/senior_level.csv")
+        all_data = pd.read_csv("BE/data/Team_1.csv")  
     except FileNotFoundError:
         raise HTTPException(status_code=500, detail="Dataset files not found. Ensure 'entry_level.csv', 'mid_level.csv', 'senior_level.csv' are in the 'data/' folder.")
 
